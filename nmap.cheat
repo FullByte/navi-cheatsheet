@@ -1,0 +1,4 @@
+% nmap
+
+# Scan with services
+echo "nmap -sC -sV <ip>"

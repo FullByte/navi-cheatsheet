@@ -1,4 +1,4 @@
-% azure login from anywhere
+% az-login
 
 # Login to azure
 Connect-AzAccount

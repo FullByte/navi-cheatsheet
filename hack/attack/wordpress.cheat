@@ -1,0 +1,11 @@
+% Wordpress
+
+# Enumerate users
+wpscan --url <url> -e u
+
+# Brute Force Admin Account
+wpscan --url <url> --usernames admin --passwords /usr/share/wordlists/rockyou.txt --threads 10
+
+# Brute Force User Account
+wpscan --url <url> --usernames <user> --passwords /usr/share/wordlists/rockyou.txt --threads 10
+

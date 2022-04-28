@@ -1,4 +1,4 @@
-% Netcat
+% Helper: Netcat
 
 # Open port for reverse shell
 nc -lvnp <port>

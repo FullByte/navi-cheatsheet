@@ -1,0 +1,7 @@
+% Update
+
+# Update Cheatsheet
+cd "/home/kali/.local/share/navi/cheats/FullByte__navi-cheatsheet" && git pull
+
+# Full Update Kali
+sudo apt update && sudo apt -y full-upgrade && sudo apt -y autoremove && sudo apt -y autoclean

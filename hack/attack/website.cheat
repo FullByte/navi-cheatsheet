@@ -1,0 +1,4 @@
+% Attack: Website
+
+# DDOS URL
+ddosify -t <url>

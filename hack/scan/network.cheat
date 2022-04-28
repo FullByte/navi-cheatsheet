@@ -1,4 +1,4 @@
-% hack-scan-nmap
+% Sca: Network
 
 # Scan with services
 nmap -sC -sV <ip>

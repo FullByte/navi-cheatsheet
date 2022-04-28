@@ -1,4 +1,4 @@
-% Wordpress
+% Attack: Wordpress
 
 # Enumerate users
 wpscan --url <url> -e u

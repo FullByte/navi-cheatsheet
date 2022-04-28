@@ -1,0 +1,13 @@
+% Scan: Website
+
+# Scan with medium word list
+gobuster dir -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt -u <IP>
+
+# Scan with big wordlist
+gobuster dir -w /usr/share/SecLists/Discovery/Web-Content/big.txt -u <IP>
+
+# Scan with custom wordlist
+gobuster dir -w <wordlist> -u <IP>
+
+# DNS subdomain scanner (use %% as * e.g. dev-%%.example.org)
+./dnscan.py -d <url>

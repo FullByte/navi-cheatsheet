@@ -1,0 +1,7 @@
+% Windows: Key Management Server
+
+# Set a KMS Server into Windows Managed Server’s configuration
+slmgr /skms <KMS-FQDN>:1688
+
+# Trigger Windows activation
+slmgr /ato

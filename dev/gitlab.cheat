@@ -1,0 +1,4 @@
+% DEV: Gitlab
+
+# Clone with access token
+git clone https://gitlab-ci-token:<access-token>@<url>

@@ -1,0 +1,49 @@
+% OS CLI: Bash
+
+#  Show all files
+ls -halt
+
+# Check installed packges
+sudo tasksel
+
+# Update and upgrade
+sudo apt update && apt -y full-upgrade && apt -y autoremove
+
+# Upgrading to a newer release 
+do-release-upgrade
+
+# Check who is online 
+w
+
+# Show all system users 
+cut -d -f1 /etc/passwd
+
+# Append to file 
+echo "<add this>" >> <to this file>
+
+# Pipe output e.g. to trash (to not see it) 
+grep "<search>" 2> /dev/null
+
+# Change owner of file or dir 
+chown usergroup <owner>
+
+# Change owner of file recersive for all folders below 
+chown -R usergroup <owner>
+
+# Change file / dir permissions 
+chmod 600 <file>
+
+# Get all environment variables
+printenv
+
+# Get all configuration variables
+getconf -a
+
+# Show ports/connections open
+lsof
+
+# Get ubuntu version
+lsb_release -r
+
+# Free disk space
+df -h

@@ -14,7 +14,7 @@ The following script will install and configure navi for bash and zsh add this r
 
 ```sh
 # Install Navi
-sudo apt -y install cargo ftf
+sudo apt -y install cargo fzf
 cargo install --locked navi
 
 # Config bash

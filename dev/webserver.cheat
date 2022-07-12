@@ -1,7 +1,13 @@
 % DEV: Webserver
 
-# Python
+# Python 2
+python -m SimpleHTTPServer 8008
+
+# Python 3
 python -m http.server 8000
+
+# Python 3 with Bind
+python -m http.server 8008 --bind 127.0.0.1
 
 # Node.js
 npx http-server ./ --port 8080
@@ -11,6 +17,9 @@ php -S 127.0.0.1:8080
 
 # Ruby
 ruby -run -e httpd ./ -p 8080
+
+# Ruby with Bind
+ruby -run -e httpd -- --bind-address=0.0.0.0 --port=9090
 
 # R
 Rscript -e 'servr::httd()' -p8080

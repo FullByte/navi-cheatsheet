@@ -12,12 +12,26 @@ Make sure to have the latest udpates: ```sudo apt update && sudo apt -y upgrade`
 
 The following script will install and configure navi for bash and zsh add this repository and update the local cheatsheet on every boot:
 
+Install Navi
+
 ```sh
-# Install Navi
 sudo apt -y install cargo fzf
 cargo install --locked navi
+```
 
-# Config bash
+Update profile
+
+Run ```sudo nano ~/.profile``` and add:
+
+```sh
+if [ -d "$HOME/bin" ] ; then
+  PATH="$PATH:$HOME/.cargo/bin"
+fi
+```
+
+Config bash
+
+```sh
 bashrc=~/.bashrc
 if [ -f "$bashrc" ];
 then
@@ -27,8 +41,11 @@ then
 else
     echo "$bashrc file does not exist. Skipped."
 fi
+```
 
-# Config zsh
+Config zsh
+
+```sh
 zshrc=~/.zshrc
 if [ -f "$zshrc" ];
 then
@@ -38,8 +55,11 @@ then
 else
     echo "$zshrc file does not exist. Skipped."
 fi
+```
 
-# Install own cheatsheet and update on each boot
+Install own cheatsheet and update on each boot
+
+```sh
 git clone "https://github.com/FullByte/navi-cheatsheet" "$(navi info cheats-path)/FullByte__navi-cheatsheet"
 (crontab -l 2>/dev/null; echo "@reboot sleep 22 && cd \"$(navi info cheats-path)/FullByte__navi-cheatsheet\" && git pull") | crontab -
 ```

@@ -1,0 +1,4 @@
+% DEV: JSON
+
+# Get readable json format
+echo '' | fzf --preview 'jq {q} < <filename.json>'

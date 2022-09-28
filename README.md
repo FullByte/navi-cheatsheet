@@ -8,56 +8,58 @@ To use navi press `control`+`g` or type `navi`.
 
 ## Install Navi + This cheatsheet
 
-Make sure to have the latest udpates: ```sudo apt update && sudo apt -y upgrade```
-
 The following script will install and configure navi for bash and zsh add this repository and update the local cheatsheet on every boot:
 
-Install Navi
+### Install Navi
+
+Make sure to have the latest udpates as well as cargo, git and fzf installed, then install navi:
 
 ```sh
-sudo apt -y install cargo fzf
+sudo apt update && sudo apt -y upgrade
+sudo apt -y install cargo fzf git
 cargo install --locked navi
 ```
 
-Update profile
+### Update profile
 
-Run ```sudo nano ~/.profile``` and add:
+Add Cargo to your PATH by updating your profile:
+
+``` sh
+sudo nano ~/.profile
+```
+
+then add:
 
 ```sh
-if [ -d "$HOME/bin" ] ; then
-  PATH="$PATH:$HOME/.cargo/bin"
+# Cargo
+if [ -d "$HOME/.cargo/bin" ] ; then
+  PATH="$HOME/.cargo/bin:$PATH"
 fi
 ```
 
-Config bash
+### Config bash
+
+Update the .bashrc ```sudo nano ~/.bashrc``` with these entries
 
 ```sh
-bashrc=~/.bashrc
-if [ -f "$bashrc" ];
-then
-    echo '\n### NAVI ###' >> ~/.bashrc
-    echo 'alias navi="~/.cargo/bin/navi"' >> ~/.bashrc
-    echo 'eval "\$(navi widget bash)"' >> ~/.bashrc
-else
-    echo "$bashrc file does not exist. Skipped."
-fi
+### NAVI ###
+alias navi="~/.cargo/bin/navi"
+eval "$(navi widget bash)"
 ```
 
-Config zsh
+### Config zsh
+
+Update the .zshrc ```sudo nano ~/.zshrc``` with these entries
 
 ```sh
-zshrc=~/.zshrc
-if [ -f "$zshrc" ];
-then
-    echo '\n### NAVI ###' >> ~/.zshrc
-    echo 'alias navi="~/.cargo/bin/navi"' >> ~/.zshrc
-    echo 'eval "\$(navi widget zsh)"' >> ~/.zshrc
-else
-    echo "$zshrc file does not exist. Skipped."
-fi
+### NAVI ###
+alias navi="~/.cargo/bin/navi"
+eval "$(navi widget zsh)"
 ```
 
-Install own cheatsheet and update on each boot
+### Install Cheatsheet
+
+Install this cheatsheet and update the cheatsheet on each boot (using git).
 
 ```sh
 git clone "https://github.com/FullByte/navi-cheatsheet" "$(navi info cheats-path)/FullByte__navi-cheatsheet"

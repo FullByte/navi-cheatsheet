@@ -6,6 +6,8 @@ Once you ran the install script below you should find a subfolder named `FullByt
 
 To use navi press `control`+`g` or type `navi`.
 
+![example](example.jpg)
+
 ## Install Navi + This cheatsheet
 
 The following script will install and configure navi for bash and zsh add this repository and update the local cheatsheet on every boot:

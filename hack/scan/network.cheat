@@ -1,4 +1,4 @@
-% Sca: Network
+% Scan: Network
 
 # Scan with services
 nmap -sC -sV <ip>

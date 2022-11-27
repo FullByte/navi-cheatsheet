@@ -6,12 +6,6 @@ ls -halt
 # Check installed packges
 sudo tasksel
 
-# Update and upgrade
-sudo apt update && apt -y full-upgrade && apt -y autoremove
-
-# Upgrading to a newer release 
-do-release-upgrade
-
 # Check who is online 
 w
 

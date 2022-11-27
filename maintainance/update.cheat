@@ -8,3 +8,9 @@ sudo apt update && sudo apt -y full-upgrade && sudo apt -y autoremove && sudo ap
 
 # Update Alpine Linux
 apk update && apk upgrade
+
+# Update and upgrade Ubuntu
+sudo apt update && sudo apt -y full-upgrade && sudo apt -y autoremove
+
+# Upgrading to a newer release 
+do-release-upgrade

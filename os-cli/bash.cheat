@@ -15,9 +15,6 @@ cut -d -f1 /etc/passwd
 # Append to file 
 echo "<add this>" >> <to this file>
 
-# Pipe output e.g. to trash (to not see it) 
-grep "<search>" 2> /dev/null
-
 # Change owner of file or dir 
 chown usergroup <owner>
 

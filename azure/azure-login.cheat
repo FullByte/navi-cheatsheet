@@ -1,7 +1,0 @@
-% az-login
-
-# Login to azure
-Connect-AzAccount
-
-# Use device code to login:
-Connect-AzAccount -Tenant <tenantID> -UseDeviceAuthentication

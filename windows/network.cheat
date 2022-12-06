@@ -1,0 +1,10 @@
+% Windows: Network
+
+# NSLookup with google DNS
+nslookup -all -debug -type=ANY -class=ANY <domain> 8.8.8.8
+
+# NSLookup with cloudflare DNS
+nslookup -all -debug -type=ANY -class=ANY <domain> 1.1.1.1
+
+# NSLookup given DNS
+nslookup -all -debug -type=ANY -class=ANY <domain> <dns>

@@ -1,0 +1,4 @@
+% DEV: ffmpeg
+
+# Create Diashow from PNG Images
+cat **/*.png | ffmpeg -f image2pipe -framerate 5 -i - -s 720x480 record.mkv

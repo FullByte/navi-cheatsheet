@@ -1,0 +1,4 @@
+% Windows: IIS
+
+# IIS Passwords
+foreach ($site in Get-ChildItem IIS:\Sites) { "Site: " + $site.name + " - " + "User: " + $site.userName + "PW: " + $site.password }

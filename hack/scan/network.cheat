@@ -1,4 +1,40 @@
 % Scan: Network
 
-# Scan with services
+# Scan simple with No ICMP
+nmap -sC -Pn <ip>
+
+# Scan with detecting the version of services
 nmap -sC -sV <ip>
+
+# Scan with TCP Syn scan
+nmap -sC -sV -sS <ip>
+
+# Scan range using file input
+nmap -iL <path-to-file>
+
+# Scan specific port range
+nmap <ip> -p <range>
+
+# Scan all ports (0 to 65535)
+nmap <ip> -p-
+
+# Scan UDP and TCP for a given port
+nmap <ip> -p T:<port>,U:<port>
+
+# Scan and save output 
+nmap -sC -sV <ip> -oA results.txt
+
+# Scan Speed (0-5)
+nmap -sC -sV <ip> -T<speed>
+
+# Scan for SMBv1 servers
+nmap -sC <ip-range> --script smb-os-discovery
+
+Scan for SSH authentication information
+nmap -sC <ip-range> --script ssh-auth-methods
+
+Scan available DHCP servers
+nmap -sC <ip-range> --script broadcast-dhcp-discover
+
+Scan with decoy IPs and MAC
+nmap --spoof-mac <MAC> -D <your-ip>,<decoy-ip1>,<decoy-ip2> <target-ip>

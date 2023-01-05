@@ -7,7 +7,7 @@ nmap -sC -Pn <ip>
 nmap -sC -sV <ip>
 
 # Scan with TCP Syn scan
-nmap -sC -sV -sS <ip>
+sudo nmap -sC -sV -sS <ip>
 
 # Scan range using file input
 nmap -iL <path-to-file>

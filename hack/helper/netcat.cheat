@@ -3,3 +3,5 @@
 # Open port for reverse shell
 nc -lvnp <port>
 
+# Stabilize reverse shell
+python3 -c 'import pty; pty.spawn("/bin/bash")'

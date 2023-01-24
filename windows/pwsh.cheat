@@ -14,6 +14,9 @@ $rng = New-Object System.Random; $pw = ""
 for($i=0;$i -lt <length>;$i++) { $pw = $pw +[char]$rng.next(33,126) }
 Write-Host($pw)
 
+# Am I part of the Built in Administrators Group?
+(New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
+
 # Last Boot Time
 Write-Host "System boot:" (Get-CimInstance -ClassName win32_operatingsystem | Select-Object -ExpandProperty LastBootUpTime)
 

@@ -89,3 +89,7 @@ Get-ChildItem . -r | sort Length -desc | Select-Object fullname, length -f 20 | 
 
 # Users logged in
 (Get-CimInstance Win32_LoggedOnUser) | Select-Object -Unique
+
+# Recursivly remove files not listed "exclusions.txt"
+$exclusions = Get-Content .\exclusions.txt
+dir -rec *.* | Where-Object { $exclusions -notcontains $_.name } | Remove-Item -WhatIf

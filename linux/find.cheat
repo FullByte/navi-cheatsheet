@@ -3,8 +3,14 @@
 # Pipe output search result e.g. to trash (to not see it) 
 grep "<search>" 2> /dev/null
 
-find text in log
+# find text in log
 grep -i "<search>" "<file>"
 
-find file name in log
+# find file name in log
 grep -E "\.[A-Za-z]{3}\s" "<file>"
+
+# find flags named "*.flag"
+find / -type f -iname '*.flag' -exec echo {} \; -exec cat {} \; 2>/dev/null
+
+# find SUID bits
+find / -perm /4000
